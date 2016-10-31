@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Randomizer</title>
+	<link rel="stylesheet" type="text/css" href="./lib/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="./lib/css/mystyle.css">
+	<script type="text/javascript" src="./lib/js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="./lib/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./magic.js"></script>
+</head>
+
+<body onload="onBodyLoad()">
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<h1 class="r-app-header">Randomizer</h1>
+	</div>
+</nav>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="input-group">
+				<input id="inputItemToAdd" type="text" class="form-control" placeholder="Item to Add">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button" onclick="onItemAdd()">
+						<span class="glyphicon glyphicon-plus"></span>
+					</button>
+					<button class="btn btn-default" type="button" onclick="onClearAll()">
+						<span class="glyphicon glyphicon-minus"></span>
+					</button>
+				</span>
+			</div>
+			<div class="well">
+				<ul id="listUserItems" class="list-group"></ul>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<button class="btn btn-default" onclick="selectOne()">Select One</button>
+			<button class="btn btn-default" onclick="randomize()">Randomize!</button>
+			<div class="well">
+				<ul id="listRandomItems" class="list-group"></ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html> 
